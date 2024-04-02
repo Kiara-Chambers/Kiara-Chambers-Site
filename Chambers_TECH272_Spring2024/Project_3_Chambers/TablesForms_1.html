@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Chambers Tables and Forms</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Practice with tables and forms">
+	
+	<link rel="stylesheet" href="../Project_2_Chambers/css/normalize.css">
+	
+	<style>
+		* {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; box-sizing: border-box;}
+		
+		/* STRUCTURE */
+		#table {background-color: #ccc4f7; padding: 20px 40px 60px 40px;}
+		
+		#form {background-color: beige; padding: 20px 40px 60px 40px;}
+		
+		table {width: 100%}
+		
+		/* TABLE */
+		table {text-align: left;}
+		th, td {padding: 6px; width: 20%;}
+		th {width: 10%; background-color: #ddd;}
+		tbody th {background-color: beige;}
+		td {width: 22.5%;}
+		tfoot td {color: white; background-color: black;}
+		td {text-align: center;}
+		td+td, td+td+td {text-align: left;}
+		td+td+td+td {text-align: right;}
+		tbody tr:nth-child(odd) {background-color: yellow;}
+		tbody tr:nth-child(even) {background-color: orange;}
+		
+		/* FROM */
+		input, select, textarea, button {display: block; margin-bottom: 6px; padding: 3px;}
+		input[type=text], input[type=email], select, textarea {width: 375px;}
+		button, input[type=reset] {width: 100px;}
+		button {margin-top: 20px; background-color: red; color: white; font-weight: 700; border: 0 solid black;}
+		button:hover, button:focus, button:active {background-color: aqua; color: black;}
+		input[type=reset]{background-color: darkkhaki; font-weight: 700; border: 0 solid black;}
+		input[type=reset]:hover, input[type=reset]:focus, input[type=reset]:active {background-color: azure;}
+		
+		.special{color: white; background-color: red; font-weight: bold;}
+		
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<main>
+			<h1>Tables and Forms</h1>
+			<section id="table">
+				<h2>Tables</h2>
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th>&nbsp;</th>
+							<th>Age</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Grade Point</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>#1</th>
+							<td>32</td>
+							<td>John</td>
+							<td>Glenn</td>
+							<td>3.04</td>
+						</tr>
+						<tr>
+							<th>#2</th>
+							<td>28</td>
+							<td>Guss</td>
+							<td>Grisson</td>
+							<td>3.28</td>
+						</tr>
+						<tr>
+							<th>#3</th>
+							<td>36</td>
+							<td>Sally</td>
+							<td>Ride</td>
+							<td class="special">4.00</td>
+						</tr>
+						<tr>
+							<th>#4</th>
+							<td>35</td>
+							<td>William</td>
+							<td>Shepard</td>
+							<td>3.96</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5">&#169;2024 All Rights Reserved</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			
+			<section id="form">
+				<h2>Forms</h2>
+				<h3>Contact us:</h3>
+				<form action="mailto:kchamb20@montgomerycollege.edu" method="post" enctype="text/plain">
+					<!-- sample@sample.com has been changed to my email address-->
+					<!-- action can = POST or GET. Always use POST if the form data contains sensitive or personal information. The POST method does not display the sumbitted for date in teh page address field. POST also has no file size limitations. -->
+					<!-- FORM fields go here-->
+					<!-- NAME -->
+					<input type="text" name="firstname" required autofocus placeholder="First Name *">
+					<input type="text" name="lastname" required placeholder="Last Name *">
+					<!-- EMAIL -->
+					<input type="email" name="email" required placeholder="Email *">
+					<!-- REASON FOR EMAIL -->
+					<select name="reason">
+						<option value="instruction">I'm looking for instruction</option>
+						<option value="newsletter">I'd like to receive your newsletter</option>
+						<option value="Other">Other reason</option>
+						<option value="Web error">There's an error on your website</option>
+					</select>
+					<!-- COMMENT -->
+					<textarea name="comment" cols="45" rows="4" placeholder="Comments"></textarea>
+					<!-- cols = how many characters are displayed on a line-->
+					<!--Rows = how many rows of infor are displayed -->
+					<!-- SEND AND RESET -->
+					<button type="send" value="Send">Send</button>
+					<input type="reset" value="Reset">
+					
+				</form>
+			</section>
+		</main>
+	</div>
+</body>
+	
+</html>
