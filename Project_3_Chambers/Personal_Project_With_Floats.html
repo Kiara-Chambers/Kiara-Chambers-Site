@@ -6,24 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Brandon Sanderson is an author who has written over 70 books from 2005&ndash;2024">
     <style>
+		/*
         *{outline: 1px solid red;}
+		*/
+		
+		/* BOX-SIZING */
+		html {
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		
+		/* STRUCTURE */
+		body {
+			background-color: #1282A2
+		}
+		
+		#wrap {
+			background-color: #FEFCFB;
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto 0 auto;
+		}
+		/* 10073E*/
+		header {
+			background-color: #1B2845;
+			color: #FEFCFB;
+		}
+		footer {
+			background-color: #1B2845;
+			color: #FEFCFB;
+		}
+		header, section, footer {
+			padding: 20px 60px;
+		}
+		figure {
+			margin:0;
+		}
+		
+		/* IMAGES */
+		img {width: 100%; margin-bottom: 12px;}
+		
+		
+		/* TYPOGRAPHY */	
+		body {
+			font-family: arial, helvetica, sans-serif;
+		}
+		h1 {
+			font-size: 36px;
+		}
+		figcaption {
+			font-style: italic;
+			font-size: 14px;
+		}
+		ul {
+			padding-left: 16px;
+		}
+		li {
+			margin-bottom: 8px;
+		}
+		header p {line-height: 1.4;}
+		figcaption {line-height: 1.4;}
 		
 		/* FLOATS */
-		.fr300 {width: 100%; max-width: 300px; float: right; margin-left: 20px; margin-bottom: 20px;}
+		.fl300 {width: 100%; max-width: 300px; float: left; margin-right: 20px; margin-bottom: 20px;}
 		
-		.fr200 {width: 100%; max-width: 200px; float: right; margin-left: 20px; margin-bottom: 20px;}
+		.fl200 {width: 100%; max-width: 200px; float: left; margin-right: 20px; margin-bottom: 20px;}
 		
 		.clearfix::after {
 			content: "";
 			clear: both;
 			display: table;
 		}
+		
+		/* NAV TYPE */
+		nav ul {
+			padding-left: 0;
+		}
+		nav li {
+			list-style: none;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		
+		/* LINKS */
+		a:link {
+			color:#C179B9;
+			text-decoration: none;
+		}
+		a:visited {
+			color:#C179B9;
+		}
+		a:hover {
+			color:#9C528B;
+		}
+		a:focus {
+			color:#9C528B;
+		}
+		a:active {
+			color:#9C528B;
+		}
+		
+		section a:link {
+			color:#C179B9;
+		}
+		section a:visited {
+			color:#C179B9;
+		}
+		section a:hover {
+			color:#9C528B;
+		}
+		section a:focus {
+			color:#9C528B;
+		}
+		section a:active {
+			color:#9C528B;
+		}
+		
+		nav a:link, nav a:visited {
+			color:#FEFCFB;
+			background-color: #9C528B;
+			padding: 6px;
+		}
+		nav a:hover, nav a:focus, nav a:active {
+			color:#FEFCFB;
+			background-color: #C179B9;
+		}
     </style>
 </head>
 
 <body id="top">
     <div id="wrap">
-        <header>
+        <header class="clearfix">
             <nav role="navigation" aria-label="main menu">
                 <ul>
                     <li><a href="#overview">Overview</a></li>
@@ -32,8 +147,8 @@
                 </ul>
             </nav>
 
-            <figure>
-                <img src="images/Brandon_Sanderson_-_Lucca_Comics_&_Games_2016.jpg">
+            <figure class="fl200">
+                <img src="images/Brandon_Sanderson_-_Lucca_Comics_&_Games_2016.jpg" alt="Brandon Sanderson Wearing Glasses">
                 <figcaption>Brandon Sanderson has written over 70 books from <time datetime="2005">2005</time>&ndash;<time datetime="2024">2024</time>.</figcaption>
             </figure>
 
@@ -44,7 +159,7 @@
             <a href="https://en.wikipedia.org/wiki/Brandon_Sanderson" target="_blank">https://en.wikipedia.org/wiki/Brandon_Sanderson</a></strong></p>
         </header>
 
-        <section id="overview"><!--opens overview-->
+        <section id="overview" class="clearfix"><!--opens overview-->
             <h2>Overview</h2>
 
             <p><a href="#top">Top</a></p><!--sends you back to the top-->
@@ -69,7 +184,7 @@
 
         </section><!--closes overview-->
 
-        <section id="career"><!--opens career-->
+        <section id="career" class="clearfix"><!--opens career-->
 
             <h2>Career</h2>
 
@@ -77,8 +192,8 @@
 
             <h3>Early writing career</h3>
 
-            <figure>
-                <img src="images/Brandon_Sanderson_with_a_German_copy_of_Elantris.jpg">
+            <figure class="fl300">
+                <img src="images/Brandon_Sanderson_with_a_German_copy_of_Elantris.jpg" alt="Brandon Sanderson at a book signing, holding a German copy of Elantris, his first published novel">
                 <figcaption>Brandon Sanderson with a German copy of Elantris</figcaption>
             </figure>
 
@@ -100,7 +215,7 @@
 
             <p>On <time datetime="2012-08-31">August 31, 2012</time>, Sanderson published a science fiction novella entitled Legion, followed by another short work titled The Emperor's Soul. In <time datetime="2013">2013</time>, Sanderson published two new young adult series. These series included The Rithmatist and the first of The Reckoners series titled Steelheart. In <time datetime="2014-03">March 2014</time>, Words of Radiance, the second book in The Stormlight Archive, was published.</p>
 
-            <p>Later that year, Subterranean Press published the second novella in the Legion series, Legion: Skin Deep. It was a preliminary nominee for the <time datetime="2015">2015</time> Hugo Awards, but did not make the final ballot. In <time datetime="2015-01">January 2015</time>, the second book of The Reckoners, titled Firefight, was published. Firefight won the <time datetime="2015">2015</time> Whitney Award in the Best Young Adult—Speculative category. It also placed eighth in the Young Adult Fantasy & Science Fiction category of the Goodreads Choice Awards and was a finalist for the <time datetime="2015">2015</time> AML Award in the Young Adult Novel category.</p>
+            <p>Later that year, Subterranean Press published the second novella in the Legion series, Legion: Skin Deep. It was a preliminary nominee for the <time datetime="2015">2015</time> Hugo Awards, but did not make the final ballot. In <time datetime="2015-01">January 2015</time>, the second book of The Reckoners, titled Firefight, was published. Firefight won the <time datetime="2015">2015</time> Whitney Award in the Best Young Adult—Speculative category. It also placed eighth in the Young Adult Fantasy &amp; Science Fiction category of the Goodreads Choice Awards and was a finalist for the <time datetime="2015">2015</time> AML Award in the Young Adult Novel category.</p>
 
             <p>Nine months later, Sanderson published Mistborn: Shadows of Self as a direct sequel to The Alloy of Law. The novel won the <time datetime="2017">2017</time> Neffy Award in the Best Novel category, placed third in the <time datetime="2015">2015</time> Goodreads Choice Awards in the Fantasy category, was a finalist in the Best Speculative Fiction category of the <time datetime="2015">2015</time> Whitney Awards, and was a preliminary nomineed for the <time datetime="2016">2016</time> Gemmell Legend Award. On <time datetime="2015-11-16">November 16, 2015,</time> Sanderson's agency (JABberwocky Literary Agency) announced that Sanderson officially sold over 7 million copies worldwide.</p>
 
@@ -118,7 +233,7 @@
 
         </section><!--closes career-->
 
-        <section id="cosmere"><!--opens cosmere-->
+        <section id="cosmere" class="clearfix"><!--opens cosmere-->
 
             <h2>Cosmere</h2>
 
